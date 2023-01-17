@@ -45,6 +45,7 @@ OpenTelemetry in their commercial products.
 | Promscale                  | No                | Yes         | [timescale.com/promscale](https://www.timescale.com/promscale)                                                                                        |
 | Sentry Software            | Yes               | Yes         | [sentrysoftware.com/...](https://www.sentrysoftware.com/products/hardware-sentry-opentelemetry-collector.html)                                        |
 | SigNoz                     | Yes               | Yes         | [signoz.io](https://signoz.io)                                                                                                                        |
+| SolarWinds                 | Yes               | No         | [solarwinds.com](https://documentation.solarwinds.com/en/success_center/observability/content/configure/services/python/python.htm)                   |
 | Splunk                     | Yes               | Yes         | [splunk.com/blog/...](https://www.splunk.com/en_us/blog/conf-splunklive/announcing-native-opentelemetry-support-in-splunk-apm.html)                   |
 | Sumo Logic                 | Yes               | Yes         | [help.sumologic.com/](https://help.sumologic.com/docs/apm/traces/quickstart/)                                                                          |
 | Uptrace                    | Yes               | Yes         | [uptrace.dev](https://uptrace.dev)                                                                                     
