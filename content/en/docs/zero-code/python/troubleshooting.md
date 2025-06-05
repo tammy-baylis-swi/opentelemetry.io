@@ -2,6 +2,7 @@
 title: Troubleshooting Python automatic instrumentation issues
 linkTitle: Troubleshooting
 weight: 40
+cSpell:ignore: gunicorn
 ---
 
 ## Installation issues
@@ -57,11 +58,17 @@ A pre-fork server, such as Gunicorn with multiple workers, can be run like this:
 gunicorn YOUR_APP:app --workers 4
 ```
 
-Specifying more than one `--workers` may not generate expected metrics when instrumentation is applied. This is because each worker maintains its own meters and exporter(s) instead of sharing a single state.
+Specifying more than one `--workers` may not generate expected metrics when
+instrumentation is applied. This is because each worker maintains its own meters
+and exporter(s) instead of sharing a single state.
 
-To instrument a server with multiple workers, consider setting up a separate instance of [Prometheus](/docs/languages/python/exporters/#prometheus-setup) to collect metrics from all workers.
+To instrument a server with multiple workers, consider setting up a separate
+instance of [Prometheus](/docs/languages/python/exporters/#prometheus-setup) to
+collect metrics from all workers.
 
-Or, initialize OpenTelemetry inside the worker process with [manual or programmatic instrumentation](/docs/zero-code/python/example/) after the server fork, instead of automatically. For example:
+Or, initialize OpenTelemetry inside the worker process with
+[manual or programmatic instrumentation](/docs/zero-code/python/example/) after
+the server fork, instead of automatically. For example:
 
 ```python
 from opentelemetry.instrumentation.auto_instrumentation.sitecustomize import initialize
